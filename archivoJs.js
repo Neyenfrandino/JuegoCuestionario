@@ -37,6 +37,10 @@ function configuracionListener(nombreEvento, idNombre, parrafoPregunta){
 
 
 configuracionListener('click', 'caja', 'preguntaInicio');
+configuracionListener('click', 'segundaCaja', 'segundaPregunta');
+configuracionListener('click', 'terceraCaja', 'terceraPregunta');
+configuracionListener('click', 'cuartaCaja', 'cuartaPregunta');
+configuracionListener('click', 'quintaCaja', 'quintapregunta');
 
 
 
