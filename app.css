@@ -1,0 +1,74 @@
+body{
+    background-image: url(img/pexels-ameruverse-digital-marketing-media-1643409.jpg);
+    background-size: 100%;
+
+}
+h1{
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    color: wheat;
+}
+
+.preguntasYrespuestas{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: wheat;
+}
+
+.divPreguntaone{
+    padding: 15px;
+}
+.caja{
+    width: 80%;
+    height: 50px;
+    background-color: black;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    padding-left: 30px;
+}   
+.pregunta{
+    font-family: monospace;
+    font-size: 30px;
+    color: springgreen;
+}
+.parrafoInput{
+    font-family:cursive;
+    font-size: 20px;
+    color:goldenrod;
+    font-weight: bolder;
+    border: solid black 3px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: inline-block;
+    cursor: pointer;
+}
+
+.finjuego{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 50px
+}
+
+.textFinal{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color:white;
+    margin: 20px;
+    padding: 20px 0 0 20px;
+
+}
+
+.botonFin{
+    width: 30%;
+    height: 30px;
+    margin-bottom: 50px;
+    border: solid black 1px;
+    border-radius: 50px;
+    background-color: yellowgreen;
+}
+.botonFin:hover{
+    color: wheat;
+    cursor: pointer;
+}
