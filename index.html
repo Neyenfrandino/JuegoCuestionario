@@ -7,41 +7,49 @@
 </head>
 <body>
 
-    <p id="RelojCuentaRegresiva">00:00:30 segundos</p>
+    <p id="RelojCuentaRegresiva" class="RelojCuentaRegresiva">00:00:30 segundos</p>
     
     <h1 class="tituloPrincipal" id="cuestionario">Cuestionamos tu ingenio </h1>
 
-    <div class="preguntasYrespuestas">
+    <div class="preguntasYrespuestas" id="preguntasYrespuestas" onclick="focusInput()">
         <div class="divPreguntaone">
-            <h2 class="pregunta" id="preguntaInicio">Pregunta numero 1</h2>
-            <p class="parrafoInput">Dime, ¿cual es la formula fisica del AMOR? </p>
-            <input type="text" class="caja">
+            <h2 class="pregunta">Pregunta numero 1</h2>
+            <p class="parrafoInput" id="preguntaInicio">Dime, ¿cual es la formula fisica del AMOR? </p>
+            <input type="text" class="caja" id="caja">
         </div>   
+
         <br>
+
         <div>
-            <h2 class="pregunta" id="segundaPregunta">Pregunta numero 2</h2>
-            <p class="parrafoInput">Dime, ! Los primeros 10 numeros de la secuencia de fibonacci ¡</p>
-            <input type="text" class="caja">
-        </div>   
+            <h2 class="pregunta" >Pregunta numero 2</h2>
+            <p class="parrafoInput" id="segundaPregunta">Dime, ! Los primeros 10 numeros de la secuencia de fibonacci ¡</p>
+            <input type="text" class="caja" id="caja">
+        </div> 
+
         <br>
+
         <div>
-            <h2 class="pregunta" id="terceraPregunta">Pregunta numero 3</h2>
-            <p class="parrafoInput">Dime, ¿cual es el ser viviente en este planeta tierra mas inteligente capas que cazar 
+            <h2 class="pregunta" >Pregunta numero 3</h2>
+            <p class="parrafoInput" id="terceraPregunta">Dime, ¿cual es el ser viviente en este planeta tierra mas inteligente capas que cazar 
                 animales que pueden ser posibles depredadores del mismo?
             </p>
-            <input type="text" class="caja">
-        </div>   
+            <input type="text" class="caja" id="segundaCaja">
+        </div>
+
         <br>
+
         <div>
-            <h2 class="pregunta" id="cuartaPregunta">Pregunta numero 4</h2>
-            <p class="parrafoInput">Solo termina la frase: !Te tratan como... </p>
-            <input type="text" class="caja">
+            <h2 class="pregunta" >Pregunta numero 4</h2>
+            <p class="parrafoInput" id="cuartaPregunta">Solo termina la frase: !Te tratan como... </p>
+            <input type="text" class="caja" id="caja">
         </div>   
+
         <br>
+        
         <div>
-            <h2 class="pregunta" id="quintapregunta">Pregunta numero 5</h1>
-            <p class="parrafoInput">Dime, ¿cual es la velocidad maxima para hacer el amor?</p>
-            <input type="text" class="caja">
+            <h2 class="pregunta" >Pregunta numero 5</h1>
+            <p class="parrafoInput" id="quintapregunta">Dime, ¿cual es la velocidad maxima para hacer el amor?</p>
+            <input type="text" class="caja" id="caja">
         </div>   
         
     </div>

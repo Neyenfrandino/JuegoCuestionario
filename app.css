@@ -72,3 +72,13 @@ h1{
     color: wheat;
     cursor: pointer;
 }
+.RelojCuentaRegresiva{
+    color: wheat;
+    border: solid white;
+    border-radius: 30px;
+    display: inline-block;
+    padding: 10px;
+    position: fixed;
+    left: 80%;
+    bottom: 60%;
+}

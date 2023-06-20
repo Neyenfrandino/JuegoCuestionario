@@ -21,8 +21,23 @@ function configuracionCuentaRegresiva(){
         clearInterval(intervalo);
         elementoCuentaRegresiva.textContent = 'Tiempo terminado';
     }
-
-      console.log('funciona')
 }
+
+ function elementoDeFoco(idNombre){
+    let miElemento = buscarPorId(idNombre);
+    miElemento.focus();
+}
+
+function configuracionListener(nombreEvento, idNombre, parrafoPregunta){
+    let input = buscarPorId(parrafoPregunta);
+    input.addEventListener(nombreEvento, function(){ 
+        elementoDeFoco(idNombre);
+    });
+}
+
+
+configuracionListener('click', 'caja', 'preguntaInicio');
+
+
 
 
