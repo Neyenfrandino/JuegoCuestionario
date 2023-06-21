@@ -35,6 +35,35 @@ function configuracionListener(nombreEvento, idNombre, parrafoPregunta){
     });
 }
 
+function botonFinDeljuego(nombreEvento, idBoton){
+    let botonFin = buscarPorId(idBoton)
+    botonFin.addEventListener(nombreEvento, function(){
+        let valorinputInicio = buscarPorId('caja').value
+        let valorinpuSegundo = buscarPorId('segundaCaja').value
+        let valorinputTercera = buscarPorId('terceraCaja').value
+        let valorinputCuarta = buscarPorId('cuartaCaja').value
+        let valorinputQuinta = buscarPorId('quintaCaja').value 
+        
+        let mensajeFinal = fechaActualizada + ' Respuesta pregunta numero 1: ' + valorinputInicio + "\n" + fechaActualizada + ' Respuesta pregunta numero 2: ' + valorinpuSegundo +
+        "\n" + fechaActualizada + ' Respuesta pregunta numero 3: ' + valorinputTercera + "\n" + fechaActualizada + ' Respuesta pregunta numero 4: ' + valorinputCuarta + "\n" + fechaActualizada + ' Respuesta pregunta numero 5: ' + valorinputQuinta;
+
+        alert(mensajeFinal);
+     })
+}
+
+ function fechaActual(){
+    let fechaActual = new Date();
+    let dia = fechaActual.getDate();
+    let mes = fechaActual.getMonth() + 1 ;
+    let anio = fechaActual.getFullYear();
+
+    let fechaFormateada = dia + '/' + mes + '/' + anio;
+
+    return fechaFormateada;
+ }
+
+
+let fechaActualizada = fechaActual();
 
 configuracionListener('click', 'caja', 'preguntaInicio');
 configuracionListener('click', 'segundaCaja', 'segundaPregunta');
@@ -42,6 +71,5 @@ configuracionListener('click', 'terceraCaja', 'terceraPregunta');
 configuracionListener('click', 'cuartaCaja', 'cuartaPregunta');
 configuracionListener('click', 'quintaCaja', 'quintapregunta');
 
-
-
+botonFinDeljuego('click', 'botonFin')
 
