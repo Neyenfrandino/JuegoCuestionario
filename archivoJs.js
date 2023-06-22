@@ -21,10 +21,18 @@ function configuracionCuentaRegresiva(){
         elementoCuentaRegresiva.textContent = 'Tiempo terminado';
         let miBody = buscarPorId('preguntasYrespuestas')
         miBody.textContent = 'GAME OVER'
-        let audioGameOver = buscarPorId('audioVerguenza');
-        audioGameOver.play()
+       /*  let audioGameOver = buscarPorId('audioVerguenza');
+        audioGameOver.play() */
+        transformarBoton();
     }
 
+}
+function transformarBoton() {
+    let botonFin = buscarPorId('botonFin');
+    botonFin.textContent = 'Puedes intentarlo de vuelta';
+    botonFin.addEventListener('click', function(){
+        location.reload();
+    })
 }
 
  function elementoDeFoco(idNombre){
@@ -58,11 +66,6 @@ function botonFinDeljuego(nombreEvento, idBoton){
 
         alert(mensajeFinal);
      })
-
-    if (configuracionCuentaRegresiva == 0) {
-        console.log('funciona')
-
-     }
 }
 
  function fechaActual(){
@@ -76,9 +79,6 @@ function botonFinDeljuego(nombreEvento, idBoton){
     return fechaFormateada;
  }
 
- /* botonFin.addEventListener('click', function() {
-    location.reload();
-      console.log('funciona') */
 
 configuracionListener('click', 'caja', 'preguntaInicio');
 configuracionListener('click', 'segundaCaja', 'segundaPregunta');
