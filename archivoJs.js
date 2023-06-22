@@ -1,5 +1,5 @@
 let intervalo;
-let tiempoRestante = 5;
+let tiempoRestante = 30 ; 
 
 function buscarPorId(nombreID){
     return document.getElementById(nombreID);
@@ -11,7 +11,7 @@ window.onload = function inicioCuentaRegesiva(){
 
 function configuracionCuentaRegresiva(){
     let elementoCuentaRegresiva = buscarPorId('RelojCuentaRegresiva');
-    let modificarReloj = ('00:00:' + tiempoRestante + ' Segundos')
+    let modificarReloj = ('00:00:' + tiempoRestante.toString().padStart(2,'0') + ' Segundos')
     elementoCuentaRegresiva.textContent = modificarReloj;
     
     tiempoRestante -= 1
@@ -19,8 +19,14 @@ function configuracionCuentaRegresiva(){
     if(tiempoRestante <= 0){
         clearInterval(intervalo);
         elementoCuentaRegresiva.textContent = 'Tiempo terminado';
-        let miBody = buscarPorId('preguntasYrespuestas')
-        miBody.textContent = 'GAME OVER'
+        let miBody = buscarPorId('preguntasYrespuestas');
+        let mensajeGameOver = buscarPorId('gameOver')
+        mensajeGameOver.style.display = 'block';
+       let mensajeFinal = buscarPorId('textFinal');
+       mensajeFinal.textContent = 'Se termino el tiempo';
+
+        miBody.textContent =
+
        /*  let audioGameOver = buscarPorId('audioVerguenza');
         audioGameOver.play() */
         transformarBoton();
@@ -58,11 +64,11 @@ function botonFinDeljuego(nombreEvento, idBoton){
         let valorinputCuarta = buscarPorId('cuartaCaja').value
         let valorinputQuinta = buscarPorId('quintaCaja').value 
         
-        let mensajeFinal = fechaActualizada + ' Respuesta pregunta numero 1: ' + valorinputInicio + "\n" + fechaActualizada 
-            + ' Respuesta pregunta numero 2: ' + valorinpuSegundo +
-            "\n" + fechaActualizada + ' Respuesta pregunta numero 3: ' + valorinputTercera + "\n" + fechaActualizada 
-            + ' Respuesta pregunta numero 4: ' + valorinputCuarta + "\n" + fechaActualizada + ' Respuesta pregunta numero 5: ' 
-            + valorinputQuinta;
+        let mensajeFinal = fechaActualizada + ' Respuesta pregunta numero 1: ' + valorinputInicio +
+                    "\n" + fechaActualizada + ' Respuesta pregunta numero 2: ' + valorinpuSegundo +
+                    "\n" + fechaActualizada + ' Respuesta pregunta numero 3: ' + valorinputTercera + 
+                    "\n" + fechaActualizada + ' Respuesta pregunta numero 4: ' + valorinputCuarta + 
+                    "\n" + fechaActualizada + ' Respuesta pregunta numero 5: ' + valorinputQuinta;
 
         alert(mensajeFinal);
      })

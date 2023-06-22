@@ -10,8 +10,10 @@
     <p id="RelojCuentaRegresiva" class="RelojCuentaRegresiva">00:00:30 segundos</p>
     
     <h1 class="tituloPrincipal" id="cuestionario">Cuestionamos tu ingenio </h1>
+     
+    <div id="gameOver"> ! Game Over ¡ </div>
 
-    <div class="preguntasYrespuestas" id="preguntasYrespuestas" onclick="focusInput()">
+    <div class="preguntasYrespuestas" id="preguntasYrespuestas">
         <div class="divPreguntaone">
             
             <h2 class="pregunta">Pregunta numero 1</h2>
@@ -55,8 +57,8 @@
         
     </div>
 
-    <div class="finjuego">
-        <h4 class="textFinal">Presiones el boton para conocer su calificacion...</h4>
+    <div id="finjuego">
+        <h4 id="textFinal">Presiones el boton para conocer su calificacion...</h4>
         <button class="botonFin" id="botonFin" type="reset">
             Fin del juego 
         </button>
@@ -66,6 +68,8 @@
         <source type="audio/mpeg" src="game-thrones-verguenza.mp3">
         Sondio no habilitdo
     </audio>
+
+    
 
     <script src="archivoJs.js"></script>
 </body>
