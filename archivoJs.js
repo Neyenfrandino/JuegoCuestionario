@@ -1,12 +1,11 @@
 let intervalo;
-let tiempoRestante = 30;
+let tiempoRestante = 5;
 
 function buscarPorId(nombreID){
     return document.getElementById(nombreID);
 }
 
 window.onload = function inicioCuentaRegesiva(){
-    let miBody = document.getElementsByTagName('body');
      let intervalo = setInterval (configuracionCuentaRegresiva, 1000);
 }
 
@@ -20,7 +19,12 @@ function configuracionCuentaRegresiva(){
     if(tiempoRestante <= 0){
         clearInterval(intervalo);
         elementoCuentaRegresiva.textContent = 'Tiempo terminado';
+        let miBody = buscarPorId('preguntasYrespuestas')
+        miBody.textContent = 'GAME OVER'
+        let audioGameOver = buscarPorId('audioVerguenza');
+        audioGameOver.play()
     }
+
 }
 
  function elementoDeFoco(idNombre){
@@ -35,6 +39,8 @@ function configuracionListener(nombreEvento, idNombre, parrafoPregunta){
     });
 }
 
+
+
 function botonFinDeljuego(nombreEvento, idBoton){
     let botonFin = buscarPorId(idBoton)
     botonFin.addEventListener(nombreEvento, function(){
@@ -44,11 +50,19 @@ function botonFinDeljuego(nombreEvento, idBoton){
         let valorinputCuarta = buscarPorId('cuartaCaja').value
         let valorinputQuinta = buscarPorId('quintaCaja').value 
         
-        let mensajeFinal = fechaActualizada + ' Respuesta pregunta numero 1: ' + valorinputInicio + "\n" + fechaActualizada + ' Respuesta pregunta numero 2: ' + valorinpuSegundo +
-        "\n" + fechaActualizada + ' Respuesta pregunta numero 3: ' + valorinputTercera + "\n" + fechaActualizada + ' Respuesta pregunta numero 4: ' + valorinputCuarta + "\n" + fechaActualizada + ' Respuesta pregunta numero 5: ' + valorinputQuinta;
+        let mensajeFinal = fechaActualizada + ' Respuesta pregunta numero 1: ' + valorinputInicio + "\n" + fechaActualizada 
+            + ' Respuesta pregunta numero 2: ' + valorinpuSegundo +
+            "\n" + fechaActualizada + ' Respuesta pregunta numero 3: ' + valorinputTercera + "\n" + fechaActualizada 
+            + ' Respuesta pregunta numero 4: ' + valorinputCuarta + "\n" + fechaActualizada + ' Respuesta pregunta numero 5: ' 
+            + valorinputQuinta;
 
         alert(mensajeFinal);
      })
+
+    if (configuracionCuentaRegresiva == 0) {
+        console.log('funciona')
+
+     }
 }
 
  function fechaActual(){
@@ -62,8 +76,9 @@ function botonFinDeljuego(nombreEvento, idBoton){
     return fechaFormateada;
  }
 
-
-let fechaActualizada = fechaActual();
+ /* botonFin.addEventListener('click', function() {
+    location.reload();
+      console.log('funciona') */
 
 configuracionListener('click', 'caja', 'preguntaInicio');
 configuracionListener('click', 'segundaCaja', 'segundaPregunta');
@@ -72,4 +87,7 @@ configuracionListener('click', 'cuartaCaja', 'cuartaPregunta');
 configuracionListener('click', 'quintaCaja', 'quintapregunta');
 
 botonFinDeljuego('click', 'botonFin')
+
+let fechaActualizada = fechaActual();
+
 
