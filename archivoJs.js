@@ -25,10 +25,12 @@ function configuracionCuentaRegresiva(){
        let mensajeFinal = buscarPorId('textFinal');
        mensajeFinal.textContent = 'Se termino el tiempo';
 
-        miBody.textContent =
+        
 
-       /*  let audioGameOver = buscarPorId('audioVerguenza');
-        audioGameOver.play() */
+        let audioGameOver = buscarPorId('audioVerguenza').play();
+        
+
+        miBody.textContent =
         transformarBoton();
     }
 
